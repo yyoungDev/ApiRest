@@ -1,11 +1,20 @@
 package spring.aprendendo.ApiRest.model;
 
+import java.util.UUID;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Student {
     private String nome;
     private int idade;
     private String curso;
+    private int id;
     
-    public Student(String nome, int idade, String curso) {
+    public Student(int id, String nome, int idade, String curso) {
+        this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.curso = curso;
