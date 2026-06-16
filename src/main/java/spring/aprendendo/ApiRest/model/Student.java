@@ -1,5 +1,7 @@
 package spring.aprendendo.ApiRest.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import lombok.Getter;
@@ -12,40 +14,21 @@ public class Student {
     private int idade;
     private String curso;
     private int id;
-    
+    public static List<Student> StudentList = new ArrayList<>();
+
+    static {
+        StudentList.add(new Student(1, "Robert", 26, "Engenharia de Software"));
+        StudentList.add(new Student(2, "Lucas", 21, "Engenharia de Software"));
+        StudentList.add(new Student(1, "Gustavo", 23,"Engenharia de Software"));
+        StudentList.add(new Student(1, "Eider", 22, "Engenharia de Software"));
+
+    }
+
     public Student(int id, String nome, int idade, String curso) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.curso = curso;
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getCurso() {
-        return curso;
-    }
-
-    public void setCurso(String curso) {
-        this.curso = curso;
-    }
-
-    
-
-
 
 }
